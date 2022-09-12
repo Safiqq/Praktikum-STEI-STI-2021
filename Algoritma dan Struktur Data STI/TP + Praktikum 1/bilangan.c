@@ -1,6 +1,6 @@
 // NIM             : 18221048
 // Nama            : Syafiq Ziyadul Arifin
-// Tanggal         : 4 September 2022
+// Tanggal         : 5 September 2022
 // Topik praktikum : Praktikum 1
 // Deskripsi       : Program bilangan subset genap
 
