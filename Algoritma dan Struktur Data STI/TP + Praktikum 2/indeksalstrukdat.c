@@ -1,8 +1,8 @@
-// NIM				: 18221048
-// Nama				: Syafiq Ziyadul Arifin
-// Tanggal			: 12 September 2022
-// Topik praktikum	: Praktikum 2
-// Deskripsi		: Program cari banyak jumlah siswa lulus, indeks rata-rata, serta indeks akhir kelas
+// NIM             : 18221048
+// Nama            : Syafiq Ziyadul Arifin
+// Tanggal         : 12 September 2022
+// Topik praktikum : Praktikum 2
+// Deskripsi       : Program cari banyak jumlah siswa lulus, indeks rata-rata, serta indeks akhir kelas
 
 #include <stdio.h>
 

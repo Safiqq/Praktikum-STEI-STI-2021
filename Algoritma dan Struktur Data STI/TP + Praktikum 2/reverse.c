@@ -1,8 +1,8 @@
-// NIM				: 18221048
-// Nama				: Syafiq Ziyadul Arifin
-// Tanggal			: 12 September 2022
-// Topik praktikum	: Praktikum 2
-// Deskripsi		: Program reverse suatu bilangan integer positif
+// NIM             : 18221048
+// Nama            : Syafiq Ziyadul Arifin
+// Tanggal         : 12 September 2022
+// Topik praktikum : Praktikum 2
+// Deskripsi       : Program reverse suatu bilangan integer positif
 
 #include <stdio.h>
 
