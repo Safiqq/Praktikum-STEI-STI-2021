@@ -2,7 +2,7 @@
 // Nama            : Syafiq Ziyadul Arifin
 // Tanggal         : 26 September 2022
 // Topik praktikum : Praktikum 4
-// Deskripsi       : 
+// Deskripsi       : Hitunglah penjumlahan bilangan dari posisi l (di array N) sampai posisi ke r (sebanyak q kali)
 
 #include <stdio.h>
 #include <stdlib.h>
