@@ -38,6 +38,7 @@ IdxType IdxMax(List L)
 
 List MinMax(List L)
 {
+	// Get index nilai minimum beserta nilainya, DELETE element, lalu INSERT di akhir list
 	IdxType idxMin = IdxMin(L);
 	ElType tempMin = Get(L, idxMin);
 	DeleteAt(&L, idxMin);
