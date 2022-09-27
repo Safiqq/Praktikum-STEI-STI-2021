@@ -50,7 +50,7 @@ void SetTab(TabMhs Tin, TabMhs *Tout)
 void SetEl(TabMhs *T, IdxType i, ElType v)
 {
 	T->TI[i] = v;
-	if (i >= T->Neff) T->Neff = i;
+	if (i > T->Neff) T->Neff = i;
 }
 
 void SetNeff(TabMhs *T, IdxType N)
@@ -102,14 +102,14 @@ ElType MakeMahasiswa(char *Nama, char *NIM, float Nilai)
 
 float RataRata(TabMhs T)
 {
-	;
 	int i;
-	float total;
+	float total = 0;
 	for (i = IdxMin; i <= T.Neff; i++)
 	{
 		total += T.TI[i].nilai;
 	}
-	return total / (float)i;
+	// Diubah dari total / (float)i karena sepertinya T bisa kosong (?) padahal di spek katanya gabisa :D
+	return total / (float)T.Neff;
 }
 
 float Max(TabMhs T)
@@ -136,38 +136,30 @@ float Min(TabMhs T)
 
 char *MaxNama(TabMhs T)
 {
-	int i, j;
-	char *nim = "";
+	int i;
 	float max = Max(T);
 	for (i = IdxMin; i <= T.Neff; i++)
 	{
 		if (T.TI[i].nilai == max)
 		{
-			// Cek apakah <nim> BELUM terisi ATAU <nim> lebih besar dari T.TI[i].nim (cari nim terkecil)
-			if (nim[0] == '\0' || nim > T.TI[i].nim) nim = T.TI[i].nim;
+			// Asumsi urutan TabMhs sudah sorted (asc) berdasarkan NIM (?)
+			return T.TI[i].nama;
 		}
 	}
-	for (i = IdxMin; i <= T.Neff; i++)
-	{
-		if (T.TI[i].nim == nim) return T.TI[i].nama;
-	}
+	// Tidak usah buat return default karena kondisi di atas pasti terpenuhi
+	// -> Max(T) pasti return nilai
 }
 
 char *MinNama(TabMhs T)
 {
-	int i, j;
-	char *nim = "";
+	int i;
 	float min = Min(T);
 	for (i = IdxMin; i <= T.Neff; i++)
 	{
 		if (T.TI[i].nilai == min)
 		{
-			if (nim[0] == '\0' || nim > T.TI[i].nim) nim = T.TI[i].nim;
+			return T.TI[i].nama;
 		}
-	}
-	for (i = IdxMin; i <= T.Neff; i++)
-	{
-		if (T.TI[i].nim == nim) return T.TI[i].nama;
 	}
 }
 
