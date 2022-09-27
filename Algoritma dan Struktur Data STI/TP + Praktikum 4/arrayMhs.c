@@ -108,7 +108,6 @@ float RataRata(TabMhs T)
 	{
 		total += T.TI[i].nilai;
 	}
-	// Diubah dari total / (float)i karena sepertinya T bisa kosong (?) padahal di spek katanya gabisa :D
 	return total / (float)T.Neff;
 }
 
