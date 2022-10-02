@@ -141,12 +141,14 @@ char *MaxNama(TabMhs T)
 	{
 		if (T.TI[i].nilai == max)
 		{
-			// Asumsi urutan TabMhs sudah sorted (asc) berdasarkan NIM (?)
-			return T.TI[i].nama;
+			// Cek apakah <nim> BELUM terisi ATAU <nim> lebih besar dari T.TI[i].nim (cari nim terkecil)
+			if (nim[0] == '\0' || nim > T.TI[i].nim) nim = T.TI[i].nim;
 		}
 	}
-	// Tidak usah buat return default karena kondisi di atas pasti terpenuhi
-	// -> Max(T) pasti return nilai
+	for (i = IdxMin; i <= T.Neff; i++)
+	{
+		if (T.TI[i].nim == nim) return T.TI[i].nama;
+	}
 }
 
 char *MinNama(TabMhs T)
@@ -157,8 +159,12 @@ char *MinNama(TabMhs T)
 	{
 		if (T.TI[i].nilai == min)
 		{
-			return T.TI[i].nama;
+			if (nim[0] == '\0' || nim > T.TI[i].nim) nim = T.TI[i].nim;
 		}
+	}
+	for (i = IdxMin; i <= T.Neff; i++)
+	{
+		if (T.TI[i].nim == nim) return T.TI[i].nama;
 	}
 }
 
