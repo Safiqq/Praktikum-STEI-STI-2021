@@ -9,18 +9,26 @@
 #include "mesinkarakterv2.h"
 #include "mesinkata.h"
 
-int main() {
+int main()
+{
 	STARTWORD();
- 	int nFirstWord = currentWord.Length, i;
-	while (!isEndWord()) {
-		for (i = 0; i < currentWord.Length; i++) {
+	int nFirstWord = currentWord.Length, i;
+	while (!isEndWord())
+	{
+		for (i = 0; i < currentWord.Length; i++)
+		{
 			currentWord.TabWord[i] += nFirstWord;
-			if (currentWord.TabWord[i] > 'Z') currentWord.TabWord[i] -= 26;
+			while (currentWord.TabWord[i] > 'Z')
+			{
+				currentWord.TabWord[i] -= 26;
+			}
 			printf("%c", currentWord.TabWord[i]);
 		}
 		ADVWORD();
-		if (!isEndWord() || currentWord.Length == 0) printf(" ");
-		else printf(".");
+		if (!isEndWord() || currentWord.Length == 0)
+			printf(" ");
+		else
+			printf(".");
 	}
 	printf("\n");
 }
