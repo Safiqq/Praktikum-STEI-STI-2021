@@ -136,6 +136,7 @@ float Min(TabMhs T)
 char *MaxNama(TabMhs T)
 {
 	int i;
+	char *nim = "";
 	float max = Max(T);
 	for (i = IdxMin; i <= T.Neff; i++)
 	{
@@ -154,6 +155,7 @@ char *MaxNama(TabMhs T)
 char *MinNama(TabMhs T)
 {
 	int i;
+	char *nim = "";
 	float min = Min(T);
 	for (i = IdxMin; i <= T.Neff; i++)
 	{
