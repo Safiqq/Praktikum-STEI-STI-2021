@@ -59,7 +59,6 @@ void CopyWord()
         ADV();
         i++;
     }
-    currentWord.Length = i;
     if (i < NMax) currentWord.Length = i;
     else currentWord.Length = NMax;
 }
