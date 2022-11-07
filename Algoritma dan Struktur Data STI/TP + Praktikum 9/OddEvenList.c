@@ -13,32 +13,29 @@ void SortList(List *L)
 {
     address P, tempP;
     infotype temp;
-    if (!IsEmpty(*L))
+    P = First(*L);
+    while (P != Nil)
     {
-        P = First(*L);
-        while (P != Nil)
+        tempP = Next(P);
+        while (tempP != Nil)
         {
-            tempP = Next(P);
-            while (tempP != Nil)
+            if (Info(P) > Info(tempP))
             {
-                if (Info(P) > Info(tempP))
-                {
-                    temp = Info(P);
-                    Info(P) = Info(tempP);
-                    Info(tempP) = temp;
-                }
-                tempP = Next(tempP);
+                temp = Info(P);
+                Info(P) = Info(tempP);
+                Info(tempP) = temp;
             }
-            P = Next(P);
+            tempP = Next(tempP);
         }
+        P = Next(P);
     }
 }
 
 void OddEvenList(List L, List *Odd, List *Even)
 {
     address P = First(L), tempP;
-    CreateEmpty(Even);
     CreateEmpty(Odd);
+    CreateEmpty(Even);
     while (P != Nil)
     {
         if (Info(P) % 2 == 0)
