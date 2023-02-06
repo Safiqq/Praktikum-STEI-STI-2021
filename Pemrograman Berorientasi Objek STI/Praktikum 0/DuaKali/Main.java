@@ -1,4 +1,3 @@
-package DuaKali;
 import java.util.Scanner;
 
 public class Main {

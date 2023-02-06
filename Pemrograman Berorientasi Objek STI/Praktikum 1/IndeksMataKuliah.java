@@ -18,21 +18,21 @@ public class IndeksMataKuliah {
      * @param mk
      * @param nama
      * @param nilai
-     *                   indeks ditentukan berdasarkan nilai yang diperoleh dengan
-     *                   ketentuan sebagai berikut
-     *                   A -> nilai = 4
-     *                   B -> 3.0 <= nilai < 4.0
-     *                   C -> 2.0 <= nilai < 3.0
-     *                   D -> 1.0 <= nilai < 2.0
-     *                   E -> 0.0 <= nilai < 1.0
-     *                   Apabila nilai tidak valid, maka indeks dianggap E dan nilai
-     *                   dianggap 0
+     *              indeks ditentukan berdasarkan nilai yang diperoleh dengan
+     *              ketentuan sebagai berikut
+     *              A -> nilai = 4
+     *              B -> 3.0 <= nilai < 4.0
+     *              C -> 2.0 <= nilai < 3.0
+     *              D -> 1.0 <= nilai < 2.0
+     *              E -> 0.0 <= nilai < 1.0
+     *              Apabila nilai tidak valid, maka indeks dianggap E dan nilai
+     *              dianggap 0
      */
     public IndeksMataKuliah(MataKuliah mk, String nama, Double nilai) {
         this.mataKuliah = mk;
         this.nama = nama;
         this.nilai = nilai;
-        this.updateIndeks(this.nilai);
+        updateIndeks(nilai);
     }
 
     /**
@@ -41,7 +41,7 @@ public class IndeksMataKuliah {
      * @return mataKuliah
      */
     public MataKuliah getMataKuliah() {
-        return this.mataKuliah;
+        return mataKuliah;
     }
 
     /**
@@ -50,7 +50,7 @@ public class IndeksMataKuliah {
      * @return nama
      */
     public String getNama() {
-        return this.nama;
+        return nama;
     }
 
     /**
@@ -59,7 +59,7 @@ public class IndeksMataKuliah {
      * @return indeks
      */
     public String getIndeks() {
-        return this.indeks;
+        return indeks;
     };
 
     /**
@@ -68,7 +68,7 @@ public class IndeksMataKuliah {
      * @return nilai
      */
     public Double getNilai() {
-        return this.nilai;
+        return nilai;
     }
 
     /**
@@ -78,7 +78,7 @@ public class IndeksMataKuliah {
      */
     public void ubahNilai(Double nilai) {
         this.nilai = nilai;
-        this.updateIndeks(this.nilai);
+        updateIndeks(nilai);
     }
 
     /**
@@ -87,18 +87,18 @@ public class IndeksMataKuliah {
      */
     public void updateIndeks(Double nilai) {
         if (nilai == 4.0) {
-            this.indeks = "A";
+            indeks = "A";
         } else if (nilai >= 3.0 && nilai < 4.0) {
-            this.indeks = "B";
+            indeks = "B";
         } else if (nilai >= 2.0 && nilai < 3.0) {
-            this.indeks = "C";
+            indeks = "C";
         } else if (nilai >= 1.0 && nilai < 2.0) {
-            this.indeks = "D";
+            indeks = "D";
         } else if (nilai >= 0.0 && nilai < 1.0) {
-            this.indeks = "E";
+            indeks = "E";
         } else {
             this.nilai = 0.0;
-            this.indeks = "E";
+            indeks = "E";
         }
     }
 
@@ -106,15 +106,17 @@ public class IndeksMataKuliah {
      * Normalisasi nilai
      * 
      * @param countLulus jumlah mahasiswa yang lulus
-     * Normalisasi nilai dilakukan dengan menambahkan nilai saat ini dengan 
-     * persentase jumlah mahasiswa yang lulus
+     *                   Normalisasi nilai dilakukan dengan menambahkan nilai saat
+     *                   ini dengan
+     *                   persentase jumlah mahasiswa yang lulus
      * 
-     * Apabila hasil normalisasi lebih dari 4.0, maka akan dianggap 4
+     *                   Apabila hasil normalisasi lebih dari 4.0, maka akan
+     *                   dianggap 4
      */
     public void normalisasiNilai(int countLulus) {
-        this.nilai = this.nilai + (this.nilai * countLulus / (this.mataKuliah.getKapasitas() * 1.0));
-        if (this.nilai > 4.0) {
-            this.nilai = 4.0;
+        nilai += (nilai * countLulus / (mataKuliah.getKapasitas() * 1.0));
+        if (nilai > 4.0) {
+            nilai = 4.0;
         }
     }
 
@@ -125,6 +127,6 @@ public class IndeksMataKuliah {
      * @param sks total sks mahasiswa
      */
     public Double kontribusiIP(int sks) {
-        return this.mataKuliah.getSks() * this.nilai / (sks * 1.0);
+        return mataKuliah.getSks() * nilai / (sks * 1.0);
     }
 }

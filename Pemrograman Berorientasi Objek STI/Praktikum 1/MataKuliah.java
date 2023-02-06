@@ -16,6 +16,7 @@ public class MataKuliah {
 
     /**
      * Konstruktor
+     * 
      * @param kode
      * @param nama
      * @param sks
@@ -23,67 +24,74 @@ public class MataKuliah {
      * @param kapasitas
      */
     public MataKuliah(String kode, String nama, int sks, String dosen, int kapasitas) {
-    	this.kode = kode;
-    	this.nama = nama;
-    	this.sks = sks;
-    	this.dosen = dosen;
-    	this.kapasitas = kapasitas;
-    	jumlahMataKuliah = jumlahMataKuliah + 1;
+        this.kode = kode;
+        this.nama = nama;
+        this.sks = sks;
+        this.dosen = dosen;
+        this.kapasitas = kapasitas;
+        jumlahMataKuliah += 1;
     }
 
     /**
      * Getter kode
+     * 
      * @return kode
      */
     public String getKode() {
-        return this.kode;
+        return kode;
     }
 
     /**
      * Getter nama
+     * 
      * @return nama
      */
     public String getNama() {
-        return this.nama;
+        return nama;
     }
 
     /**
      * Getter sks
+     * 
      * @return sks
      */
     public int getSks() {
-        return this.sks;
+        return sks;
     }
 
     /**
      * Getter dosen
+     * 
      * @return dosen
      */
     public String getDosen() {
-    	return this.dosen;
+        return dosen;
     }
 
     /**
      * Getter kapasitas
+     * 
      * @return kapasitas
      */
     public int getKapasitas() {
-    	return this.kapasitas;
+        return kapasitas;
     }
 
     /**
      * Getter jumlah mata kuliah
+     * 
      * @return jumlah mata kuliah
      */
     public static int getJumlahMataKuliah() {
-    	return jumlahMataKuliah;
+        return jumlahMataKuliah;
     }
 
     /**
      * Menambahkan kapasitas mahasiswa
+     * 
      * @param tambahan jumlah kapasitas yang ditambahkan
      */
     public void tambahKapasitas(int tambahan) {
-    	this.kapasitas = this.kapasitas + tambahan;
+        kapasitas += tambahan;
     }
 }
