@@ -1,3 +1,4 @@
+
 /**
  * DuniaRobot.java
  * DuniaRobot berfungsi untuk mengetahui harga dan spesifikasi masing-masing
@@ -6,7 +7,7 @@
  * @author 18221048 Syafiq Ziyadul Arifin
  */
 
- import java.util.Scanner;
+import java.util.Scanner;
 
 public class DuniaRobot {
     public static void main(String[] args) {
@@ -20,7 +21,7 @@ public class DuniaRobot {
             for (int i = 0; i < totalTransformation; i++) {
                 robot.addTransformation();
             }
-            
+
             System.out.println("Number of Parts: " + robot.getNumberOfParts() + ", IsActive: " + robot.getIsActive());
             System.out.println("Jumlah transformasi: " + robot.getTotalTransformation());
             System.out.println("Harga robot: " + robot.getPrice());
@@ -31,7 +32,7 @@ public class DuniaRobot {
             for (int i = 0; i < totalModel; i++) {
                 robot.addModel();
             }
-            
+
             System.out.println("Number of Parts: " + robot.getNumberOfParts() + ", IsActive: " + robot.getIsActive());
             System.out.println("Jumlah model: " + robot.getTotalModel());
             System.out.println("Harga robot: " + robot.getPrice());
@@ -39,7 +40,7 @@ public class DuniaRobot {
             long mileage = scan.nextLong();
             boolean isActive = scan.nextBoolean();
             WallE robot = new WallE(mileage, isActive);
-            
+
             System.out.println("Number of Parts: " + robot.getNumberOfParts() + ", IsActive: " + robot.getIsActive());
             System.out.println("Jumlah mileage: " + robot.getMileage());
             System.out.println("Harga robot: " + robot.getPrice());

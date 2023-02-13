@@ -34,7 +34,7 @@ public abstract class Robot {
     public String toString() {
         // Mengembalikan informasi hewan dengan format: "Number of Parts:
         // {numberOfParts}, IsActive: {isActive}"
-        return "Number of Parts: " + numberOfParts +", IsActive: " + isActive;
+        return "Number of Parts: " + numberOfParts + ", IsActive: " + isActive;
     }
 
     public abstract long getPrice();
