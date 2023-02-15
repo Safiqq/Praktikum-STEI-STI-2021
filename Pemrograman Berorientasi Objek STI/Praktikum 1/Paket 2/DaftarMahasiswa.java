@@ -1,6 +1,6 @@
 /**
  * IPMahasiswa.java
- * [Jelaskan kegunaan class ini]
+ * IPMahasiswa merupakan sebuah kelas yang mengeluarkan info mahasiswa sesuai input
  * 
  * @author 18221048 Syafiq Ziyadul Arifin
  */

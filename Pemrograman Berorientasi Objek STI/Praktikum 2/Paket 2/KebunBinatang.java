@@ -1,4 +1,3 @@
-
 /**
  * KebunBinatang.java
  * KebunBinatang berfungsi untuk mengetahui kekuatan dari masing-masing
