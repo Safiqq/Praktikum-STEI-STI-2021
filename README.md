@@ -4,7 +4,9 @@ Repository ini merupakan repository kumpulan jawaban praktikum mata kuliah kompu
 Repository ini terdiri dari 2 mata kuliah fakultas:
 1. Pengenalan Komputasi (Semester 1)
 2. Dasar Pemrograman (Semester 2)
+
 dan 3 mata kuliah jurusan:
+
 3. Algoritma dan Struktur Data STI (Semester 3)
 4. Sistem dan Arsitektur Komputer (Semester 3)
 5. Pemrograman Berorientasi Objek STI (Semester 4)
