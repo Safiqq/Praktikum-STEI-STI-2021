@@ -35,9 +35,7 @@ public class WordProcessor {
      */
     public static void removeWord(String word) {
         for (int i = 0; i < words.size(); i++) {
-            if (word.equals(words.get(i))) {
-                words.remove(i);
-            }
+            if (word.equals(words.get(i))) words.remove(i);
         }
     }
 
@@ -75,9 +73,7 @@ public class WordProcessor {
      *         valid
      */
     public static boolean isPalindrome(int indeks) {
-        if (indeks >= 0 && indeks < words.size()) {
-            return words.get(indeks).equals(reverseWord(indeks).toString());
-        }
+        if (indeks >= 0 && indeks < words.size()) return words.get(indeks).equals(reverseWord(indeks).toString());
         return false;
     }
 }

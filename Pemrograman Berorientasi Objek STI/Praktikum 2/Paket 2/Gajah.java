@@ -14,7 +14,7 @@ public class Gajah extends Animal {
         // Konstruktor, jumlah gading minimal 0 maksimal 2
         super(4);
         this.basePower = basePower;
-        this.jumlahGading = jumlahGading < 0 ? 0 : jumlahGading > 2 ? 2 : jumlahGading;
+        this.jumlahGading = (jumlahGading < 0) ? 0 : ((jumlahGading > 2) ? 2 : jumlahGading);
     }
 
     public long getJumlahGading() {

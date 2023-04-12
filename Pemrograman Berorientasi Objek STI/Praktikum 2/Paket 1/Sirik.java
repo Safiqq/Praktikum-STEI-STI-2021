@@ -33,10 +33,7 @@ public class Sirik extends Robot {
         // maka formula = price + (500 * numberOfParts - (100 * totalModel))
         // Apabila total model kurang dari/sama dengan 2,
         // maka formula = price + (500 * numberOfParts * totalModel)
-        if (totalModel <= 2) {
-            return price + (500 * getNumberOfParts() * totalModel);
-        } else {
-            return price + (500 * getNumberOfParts() - (100 * totalModel));
-        }
+        if (totalModel <= 2) return price + (500 * getNumberOfParts() * totalModel);
+        else return price + (500 * getNumberOfParts() - (100 * totalModel));
     }
 }

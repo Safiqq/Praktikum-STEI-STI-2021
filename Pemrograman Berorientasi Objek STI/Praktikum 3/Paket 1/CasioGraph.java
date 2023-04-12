@@ -20,49 +20,33 @@ public class CasioGraph implements GraphCalculator {
 	public int add(int x, int y) {
 		if (status) {
 			batteryLevel -= 10;
-			if (batteryLevel <= 0) {
-				status = false;
-			}
+			if (batteryLevel <= 0) status = false;
 			return x + y;
-		} else {
-			return -1;
-		}
+		} else return -1;
 	}
 
 	public int substract(int x, int y) {
 		if (status) {
 			batteryLevel -= 10;
-			if (batteryLevel <= 0) {
-				status = false;
-			}
+			if (batteryLevel <= 0) status = false;
 			return x - y;
-		} else {
-			return -1;
-		}
+		} else return -1;
 	}
 
 	public int multiply(int x, int y) {
 		if (status) {
 			batteryLevel -= 10;
-			if (batteryLevel <= 0) {
-				status = false;
-			}
+			if (batteryLevel <= 0) status = false;
 			return x * y;
-		} else {
-			return -1;
-		}
+		} else return -1;
 	}
 
 	public double divide(int x, int y) {
 		if (status) {
 			batteryLevel -= 10;
-			if (batteryLevel <= 0) {
-				status = false;
-			}
+			if (batteryLevel <= 0) status = false;
 			return x / y;
-		} else {
-			return -1;
-		}
+		} else return -1;
 	}
 
 	public void start() {
@@ -82,9 +66,7 @@ public class CasioGraph implements GraphCalculator {
 	public void shiftX(int x) {
 		if (status) {
 			batteryLevel -= 10;
-			if (batteryLevel <= 0) {
-				status = false;
-			}
+			if (batteryLevel <= 0) status = false;
 			point.setX(point.getX() + x);
 		}
 	}
@@ -92,9 +74,7 @@ public class CasioGraph implements GraphCalculator {
 	public void shiftY(int y) {
 		if (status) {
 			batteryLevel -= 10;
-			if (batteryLevel <= 0) {
-				status = false;
-			}
+			if (batteryLevel <= 0) status = false;
 			point.setY(point.getY() + y);
 		}
 	}
@@ -102,13 +82,9 @@ public class CasioGraph implements GraphCalculator {
 	public double distance(int x, int y) {
 		if (status) {
 			batteryLevel -= 10;
-			if (batteryLevel <= 0) {
-				status = false;
-			}
+			if (batteryLevel <= 0) status = false;
 			return Math.sqrt(Math.pow(point.getX() - x, 2) + Math.pow(point.getY() - y, 2));
-		} else {
-			return -1;
-		}
+		} else return -1;
 	}
 
 	public Boolean getStatus() {

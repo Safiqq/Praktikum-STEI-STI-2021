@@ -44,6 +44,8 @@ public class Fespa extends Motor {
         // roda dengan kapasitas mesin b cc, memiliki warna c, dan memiliki lampu depan
         // berbentuk persegi panjang" dengan a adalah numberOfWheels, b adalah
         // engineCapacity dan c adalah color
-        return "Motor ini memiliki " + getNumberOfWheels() + " roda dengan kapasitas mesin " + getEngineCapacity() + " cc, memiliki warna " + color + ", dan memiliki lampu depan berbentuk " + (isRoundedFrontLamp ? "lingkaran" : "persegi panjang");
+        return "Motor ini memiliki " + getNumberOfWheels() + " roda dengan kapasitas mesin " + getEngineCapacity()
+                + " cc, memiliki warna " + color + ", dan memiliki lampu depan berbentuk "
+                + (isRoundedFrontLamp ? "lingkaran" : "persegi panjang");
     }
 }

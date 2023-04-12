@@ -49,13 +49,9 @@ public class CarPrinter {
         // equals()
         // yang dimiliki kedua Object tersebut. Contoh: "test".equals("test") bernilai
         // True
-        if (carType.equals("Car")) {
-            testCar = new Car(4, 5);
-        } else if (carType.equals("Bus")) {
-            testCar = new Bus(6, 10, 20, true);
-        } else if (carType.equals("Perari")) {
-            testCar = new Perari(4, 20, 50, false);
-        }
+        if (carType.equals("Car")) testCar = new Car(4, 5);
+        else if (carType.equals("Bus")) testCar = new Bus(6, 10, 20, true);
+        else if (carType.equals("Perari")) testCar = new Perari(4, 20, 50, false);
     }
 
     public void printCarList() {

@@ -58,6 +58,7 @@ public class Car {
         // Apabila isRacingCar true kembalikan "Mobil balap ini memiliki a roda dengan
         // kapasitas mesin x cc" dengan a numberOfWheels dan x engineCapacity
         // else kembalikan "Mobil ini memiliki a roda dengan kapasitas mesin x cc"
-        return "Mobil " + (isRacingCar() ? "balap " : "") + "ini memiliki " + numberOfWheels + " roda dengan kapasitas mesin " + engine.getEngineCapacity() + " cc";
+        return "Mobil " + (isRacingCar() ? "balap " : "") + "ini memiliki " + numberOfWheels
+                + " roda dengan kapasitas mesin " + engine.getEngineCapacity() + " cc";
     }
 }

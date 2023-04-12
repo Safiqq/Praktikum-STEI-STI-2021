@@ -18,9 +18,7 @@ public class PalindromeProcessor {
                 temp.append(str.charAt(j));
                 boolean isPalindrome = true;
                 for (int k = 0; k < temp.length() / 2; k++) {
-                    if (temp.charAt(k) != temp.charAt(temp.length() - k - 1)) {
-                        isPalindrome = false;
-                    }
+                    if (temp.charAt(k) != temp.charAt(temp.length() - k - 1)) isPalindrome = false;
                 }
                 if (isPalindrome && answer.length() < temp.length()) {
                     answer.setLength(0);

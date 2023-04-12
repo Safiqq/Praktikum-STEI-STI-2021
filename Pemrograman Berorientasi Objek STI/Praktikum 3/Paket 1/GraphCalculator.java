@@ -6,6 +6,4 @@
  * @author 18221048 Syafiq Ziyadul Arifin
  */
 
-interface GraphCalculator extends Calculator, GraphUpgrade {
-
-}
+interface GraphCalculator extends Calculator, GraphUpgrade {}

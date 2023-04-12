@@ -27,6 +27,7 @@ public class Motor {
     }
 
     public String printDescription() {
-        return String.format("Motor ini memiliki %d roda dengan kapasitas mesin %d cc", this.numberOfWheels, this.engineCapacity);
+        return String.format("Motor ini memiliki %d roda dengan kapasitas mesin %d cc", this.numberOfWheels,
+                this.engineCapacity);
     }
 }

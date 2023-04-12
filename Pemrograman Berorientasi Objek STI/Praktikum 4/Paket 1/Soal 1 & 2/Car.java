@@ -12,7 +12,6 @@ public class Car {
     public Car(int numberOfWheels, int engineCapacity) {
         this.numberOfWheels = numberOfWheels;
         this.engineCapacity = engineCapacity;
-
     }
 
     public int getNumberOfWheels() {

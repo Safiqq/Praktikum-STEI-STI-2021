@@ -44,6 +44,8 @@ public class FCX extends Motor {
         // dengan kapasitas mesin b cc, memiliki kapasitas bagasi c liter, dan sedang
         // tidak dapat berhenti otomatis apabila didiamkan" dengan a adalah
         // numberOfWheels, b adalah engineCapacity dan c adalah luggageCapacity
-        return "Motor ini memiliki " + getNumberOfWheels() + " roda dengan kapasitas mesin " + getEngineCapacity() + " cc, memiliki kapasitas bagasi " + luggageCapacity + " liter, dan sedang " + (isIdleStoping ? "" : "tidak ") + "dapat berhenti otomatis apabila didiamkan";
+        return "Motor ini memiliki " + getNumberOfWheels() + " roda dengan kapasitas mesin " + getEngineCapacity()
+                + " cc, memiliki kapasitas bagasi " + luggageCapacity + " liter, dan sedang "
+                + (isIdleStoping ? "" : "tidak ") + "dapat berhenti otomatis apabila didiamkan";
     }
 }

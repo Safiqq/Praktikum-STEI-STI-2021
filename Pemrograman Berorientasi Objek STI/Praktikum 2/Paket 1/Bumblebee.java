@@ -30,10 +30,6 @@ public class Bumblebee extends Robot {
     public long getPrice() {
         // Apabila aktif, harga bernilai numberOfParts * 1000 * totalTransformation
         // Apabila tidak aktif, harga bernilai numberOfParts * 1000
-        if (getIsActive()) {
-            return getNumberOfParts() * 1000 * totalTransformation;
-        } else {
-            return getNumberOfParts() * 1000;
-        }
+        return getNumberOfParts() * 1000 * (getIsActive() ? totalTransformation : 1);
     }
 }

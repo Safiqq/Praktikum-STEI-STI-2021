@@ -6,6 +6,4 @@
  * @author 18221048 Syafiq Ziyadul Arifin
  */
 
-interface TrackableVehicle extends Vehicle, Trackable {
-
-}
+interface TrackableVehicle extends Vehicle, Trackable {}

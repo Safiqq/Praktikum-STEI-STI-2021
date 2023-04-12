@@ -49,6 +49,8 @@ public class Bus extends Car {// Jangan lupa tambahkan kata kunci untuk melakuka
         // roda dengan kapasitas mesin b cc, memiliki kapasitas penumpang c orang, dan
         // tidak digunakan untuk perjalanan jauh", dimana a adalah numberOfWheels, b
         // adalah engineCapacity dan c adalah passengerCapacity
-        return "Mobil ini memiliki " + getNumberOfWheels() + " roda dengan kapasitas mesin " + getEngineCapacity() + " cc, memiliki kapasitas penumpang " + passengerCapacity + " orang, dan " + (isUsedForLongTrip ? "" : "tidak ") + "digunakan untuk perjalanan jauh";
+        return "Mobil ini memiliki " + getNumberOfWheels() + " roda dengan kapasitas mesin " + getEngineCapacity()
+                + " cc, memiliki kapasitas penumpang " + passengerCapacity + " orang, dan "
+                + (isUsedForLongTrip ? "" : "tidak ") + "digunakan untuk perjalanan jauh";
     }
 }
